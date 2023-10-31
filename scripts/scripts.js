@@ -116,7 +116,10 @@ async function loadLazy(doc) {
   sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
 function alertFunction(){
-  alert('alert');
+  document.addEventListener('click', function (event) {
+  console.log('JC Click event anywhere on the document.');
+  // Your event handling code here
+});
 }
 /**
  * Loads everything that happens a lot later,
