@@ -115,12 +115,23 @@ async function loadLazy(doc) {
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
-function alertFunction(){
+function setupClickstreamCapture() {
+  const clickstream = [];
+
   document.addEventListener('click', function (event) {
-  console.log('JC Click event anywhere on the document.');
-  // Your event handling code here
-});
+    const eventData = {
+      timestamp: new Date(),
+      x: event.clientX,
+      y: event.clientY,
+      target: event.target.tagName,
+    };
+
+    clickstream.push(eventData);
+    console.log('Clickstream event captured:', eventData);
+  });
 }
+
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
@@ -135,7 +146,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  alertFunction();
+  setupClickstreamCapture();
 }
 
 loadPage();
