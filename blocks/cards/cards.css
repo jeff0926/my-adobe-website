@@ -17,7 +17,6 @@
 .cards > ul > li {
   border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color)
-  transition: transform 0.3s; /* JC Add a smooth transition effect */
 }
 
 .cards .cards-card-body {
