@@ -115,7 +115,9 @@ async function loadLazy(doc) {
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
-
+function alertFunction(){
+  alert('alert');
+}
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
@@ -130,6 +132,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  alertFunction();
 }
 
 loadPage();
