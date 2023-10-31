@@ -1,3 +1,4 @@
+/*JC: add drop shadow 
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -8,9 +9,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
 }
 
+/* JC add transition
+.cards > ul li:hover {
+  transform: translate(-5px, -5px); /* JC Move up and to the left by 5px on hover */
+}
+
 .cards > ul > li {
   border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color)
+  transition: transform 0.3s; /* JC Add a smooth transition effect */
 }
 
 .cards .cards-card-body {
