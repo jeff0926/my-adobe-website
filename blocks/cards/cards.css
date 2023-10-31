@@ -30,3 +30,6 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+.cards > ul li:hover {
+  transform: translate(-5px, -5px); /* Move up and to the left by 5px on hover */
+}
