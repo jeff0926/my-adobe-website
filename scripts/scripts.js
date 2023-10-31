@@ -116,6 +116,7 @@ async function loadLazy(doc) {
   sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
 function setupClickstreamCapture() {
+  alert('setupClickstreamCapture()');
   const clickstream = [];
 
   document.addEventListener('click', function (event) {
