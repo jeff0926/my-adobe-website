@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 16px;
-   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
 }
 
 .cards.dark.wide {
@@ -37,5 +37,5 @@
     object-fit: cover;
 }
 .cards > ul li:hover {
-  /* transform: translate(-5px, -5px); /* Move up and to the left by 5px on hover */
+  transform: translate(-5px, -5px); /* Move up and to the left by 5px on hover */
 }
