@@ -9,6 +9,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
 }
 
+.cards.no-shadow-wide {
+  box-shadow: none; /* Remove the drop shadow */
+}
+
 .cards.dark.wide {
   background-color: #333; /* Dark background color */
   padding: 20px; /* Add some padding for spacing */
