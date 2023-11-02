@@ -22,14 +22,20 @@ function create_ui5() {
   </div>
 </ui5-card>`;
 
-  
   // Find the element by its class (assuming the class is "cards ui5-button")
   console.log('creating ui5-button into div cards.ui5-button ');
   var targetDiv = document.querySelector('div.cards.ui5-button');
-
+  // JC: trying ot grab an entire block and output to console - test
+  var grabDivBlock = document.querySelector('div.cards.ui5-cards');
   // Define the new HTML content
   var newContent = htmlString;
-
+  if (grabDivBlock) {
+    var divMarkup = grabDivBlock.outterHTML;
+    console.log(divMarkup);
+  }else{
+    console.log('cant find grabDivBlock');
+  }
+}
   // Add the new HTML content to the existing content
   if (targetDiv) {
     console.log('found the div...');
