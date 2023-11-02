@@ -35,7 +35,7 @@ function create_ui5() {
   }else{
     console.log('cant find grabDivBlock');
   }
-}
+
   // Add the new HTML content to the existing content
   if (targetDiv) {
     console.log('found the div...');
