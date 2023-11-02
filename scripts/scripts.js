@@ -159,6 +159,7 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
   setupClickstreamCapture();
+  importExternalModule();
 }
 
 loadPage();
