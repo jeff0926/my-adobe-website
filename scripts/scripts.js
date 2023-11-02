@@ -132,7 +132,7 @@ async function importExternalModule() {
 }
 
 // Call the async function to initiate the import
-importExternalModule();
+//importExternalModule();
 
   document.addEventListener('click', function (event) {
     const eventData = {
