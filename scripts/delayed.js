@@ -14,6 +14,7 @@ function create_ui5() {
 
   // Add the new HTML content to the existing content
   if (targetDiv) {
+    console.log('found the div...');
     targetDiv.innerHTML = newContent;
   } else {
     console.log('Target div element not found.');
