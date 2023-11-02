@@ -15,3 +15,4 @@ async function importExternalModule() {
   }
 }
 // add more delayed functionality here
+importExternalModule();
