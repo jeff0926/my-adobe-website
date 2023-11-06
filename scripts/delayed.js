@@ -5,7 +5,7 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 //after ui5 library is ready inject ui5 button as a test
 function create_ui5() {
-alert("called");
+//alert("called");
   var htmlString = `
 <ui5-card class="tile">
   <ui5-card-header slot="header" title-text="UI5-card with ui5-list + ui5-li" subtitle-text="Below ui5-list ui5-li" status="3 of 10">
@@ -45,7 +45,7 @@ alert("called");
 //JC : import SAP UI5 <webcomponents>  
 // Define an async function to import the external module
 async function importExternalModule() {
-  alert('importExternalModule');
+  //alert('importExternalModule');
   try {
     const module = await import('https://sap.github.io/ui5-webcomponents/assets/js/ui5-webcomponents/bundle.esm.js');
     alert('Jeff C : UI5 webcomponent library initiated and available: You can now use the UI5 library and its functionality');
