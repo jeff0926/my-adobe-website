@@ -116,7 +116,7 @@ async function loadLazy(doc) {
   sampleRUM.observe(main.querySelectorAll('picture > img'));
 }
 function setupClickstreamCapture() {
-  alert('This is an alert JC custom clcikstream events are setupClickstreamCapture() look @ console for events');
+  alert('JC custom user clcikstream events are set: look @ console for events');
   const clickstream = [];
   
 
