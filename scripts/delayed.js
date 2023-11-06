@@ -47,7 +47,7 @@ function create_ui5() {
 async function importExternalModule() {
   try {
     const module = await import('https://sap.github.io/ui5-webcomponents/assets/js/ui5-webcomponents/bundle.esm.js');
-    alert('You can now use the module and its functionality');
+    alert('JC : UI5 webcomponent library initiated and available: You can now use the UI5 library and its functionality');
     console.log('External module has been imported successfully');
     create_ui5()
   } catch (error) {
