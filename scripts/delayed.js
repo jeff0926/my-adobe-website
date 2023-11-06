@@ -5,7 +5,7 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 //after ui5 library is ready inject ui5 button as a test
 function create_ui5() {
-
+alert("called");
   var htmlString = `
 <ui5-card class="tile">
   <ui5-card-header slot="header" title-text="UI5-card with ui5-list + ui5-li" subtitle-text="Below ui5-list ui5-li" status="3 of 10">
