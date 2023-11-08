@@ -8,7 +8,7 @@
     grid-gap: 16px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
 }
-/* Jeff C. add variable (dark wide) to an idividual card to change the border color to dark grey
+
 .cards.dark.wide {
   background-color: #333; /* Dark background color */
   padding: 20px; /* Add some padding for spacing */
@@ -37,6 +37,6 @@
     object-fit: cover;
 }
 .cards > ul li:hover {
-/* Jeff C - uncomment to add animation to cards globally
+
   transform: translate(-5px, -5px); /* Move up and to the left by 5px on hover */
 }
