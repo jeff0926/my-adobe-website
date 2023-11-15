@@ -10,15 +10,4 @@
     }
   ]
 }
-{
-  "project": "Example",
-  "plugins": [
-    {
-      "id": "library2",
-      "title": "Library2",
-      "environments": ["edit"],
-      "url": "/tools/sidekick/hello.html",
-      "includePaths": ["**.docx**"]
-    }
-  ]
-}
+
