@@ -6,7 +6,7 @@ sampleRUM('cwv');
 //after ui5 library is ready inject ui5 button as a test
 function create_ui5() {
 alert("called create_ui5()");
-  var htmlString = ' <ui5-carousel cyclic>
+  var htmlString = ' <ui5-carousel>
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Landscape 1">
         <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Landscape 2">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Bulb">
