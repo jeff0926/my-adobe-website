@@ -6,11 +6,21 @@ sampleRUM('cwv');
 //after ui5 library is ready inject ui5 button as a test
 function create_ui5() {
 alert("called create_ui5()");
-  var htmlString = ' <ui5-carousel>
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Landscape 1">
-        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Landscape 2">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Bulb">
-    </ui5-carousel>';
+  var htmlString = `
+<ui5-card class="tile">
+  <ui5-card-header slot="header" title-text="UI5-card with ui5-list + ui5-li" subtitle-text="Below ui5-list ui5-li" status="3 of 10">
+    <ui5-icon name="group" slot="avatar"></ui5-icon>
+    <ui5-button design="Transparent" slot="action" onclick="showAlert('Tile 6 UI5 CARD')">View All</ui5-button>
+  </ui5-card-header>
+  <div class="card-content">
+    <ui5-list separators="None" class="card-content-child" style="width: 100%; margin-bottom: 0.75rem;">
+      <ui5-li image="https://www.w3schools.com/howto/img_avatar2.png" description="User Researcher">Alain Chevalier</ui5-li>
+      <ui5-li image="https://www.w3schools.com/howto/img_avatar.png" description="Artist">Monique Legrand</ui5-li>
+      <ui5-li image="https://www.w3schools.com/howto/img_avatar2.png" description="UX Specialist">John Smith</ui5-li>
+      <ui5-li image="https://www.w3schools.com/howto/img_avatar.png" description="UX Specialist">Isabella Adams</ui5-li>
+    </ui5-list>
+  </div>
+</ui5-card>`;
 
   // Find the element by its class (assuming the class is "cards ui5-button")
   console.log('creating ui5-button into div cards.ui5-button ');
