@@ -45,14 +45,14 @@ alert("called create_ui5()");
 //JC : import SAP UI5 <webcomponents>  
 // Define an async function to import the external module
 async function importExternalModule() {
-  alert('importExternalModule');
+  //alert('importExternalModule');
   try {
     const module = await import('https://sap.github.io/ui5-webcomponents/assets/js/ui5-webcomponents/bundle.esm.js');
     //https://ui5.sap.com/resources/sap-ui-core.js
     //https://sap.github.io/ui5-webcomponents/assets/js/ui5-webcomponents/bundle.esm.js
     //alert('Jeff C : UI5 webcomponent library initiated and available: You can now use the UI5 library and its functionality');
     console.log('External module has been imported successfully');
-    create_ui5()
+    //create_ui5()
   } catch (error) {
     console.error('Failed to import the external module:', error);
   }
