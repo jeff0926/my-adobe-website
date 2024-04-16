@@ -1,50 +1,52 @@
-//import { getAssetUrl } from '../../utils/dam'; // Assuming a helper function to get DAM asset URLs
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
-const jsonData = JSON.parse(document.getElementById('product-tour').textContent); // Assuming data is stored in a hidden element
+export default function decorate(block) {
+  // Alert is no longer needed, remove it
+  // alert(block);
 
-const accordionContainer = document.querySelector(".accordion-container");
-const mainImage = document.querySelector("#main-image");
+  const ul = document.createElement('ul');
+  [...block.children].forEach((row) => {
+    const li = document.createElement('li');
 
-// Loop through tours data and populate the structure
-jsonData.tours.forEach((tour) => {
-  const accordion = document.createElement("button");
-  accordion.textContent = tour.name;
-  accordion.classList.add("accordion");
-  accordionContainer.appendChild(accordion);
+    // Check if the row has at least 4 children (assuming first 4 columns are for product tour)
+    if (row.children.length >= 4) {
+      const [imageCell, contentCell, imagePathCell, altTextCell] = row.children;
 
-  const panel = document.createElement("div");
-  panel.classList.add("panel");
-  accordionContainer.appendChild(panel);
+      // Extract data from relevant columns (assuming image path in 3rd and alt text in 4th)
+      const imagePath = imagePathCell.textContent.trim();
+      const altText = altTextCell.textContent.trim();
 
-  const carouselContainer = document.createElement("div");
-  carouselContainer.classList.add("carousel-container");
-  panel.appendChild(carouselContainer);
+      // Assuming content goes in the second cell
+      const content = contentCell.textContent.trim();
 
-  const carouselSlide = document.createElement("div");
-  carouselSlide.classList.add("carousel-slide");
-  carouselContainer.appendChild(carouselSlide);
+      // Create an image element if image path exists
+      let imageElement;
+      if (imagePath) {
+        imageElement = document.createElement('img');
+        imageElement.src = imagePath;
+        imageElement.alt = altText;
+      }
 
-  tour.steps.forEach((step) => {
-    const content = document.createElement("div");
-    content.classList.add("carousel-content");
+      // Create the product tour content (you can customize this based on your needs)
+      const productTourContent = document.createElement('div');
+      productTourContent.classList.add('product-tour-content'); // Add a custom class for styling
+      if (imageElement) {
+        productTourContent.append(imageElement);
+      }
+      productTourContent.append(content);
 
-    const picture = document.createElement("picture");
-    const img = document.createElement("img");
-    img.src = getAssetUrl(step.imgPath); // Update image source using DAM URL
-    img.alt = step.imgAltText;
-    picture.appendChild(img);
-    content.appendChild(picture);
+      li.append(productTourContent);
+    } else {
+      console.warn("Skipping row with less than 4 columns!");
+      // You can handle rows with less than 4 columns differently (e.g., skip them or display an error)
+    }
 
-    const text = document.createElement("p");
-    text.textContent = step.text;
-    content.appendChild(text);
+    li.classList.add('product-tour-step'); // Add a custom class for styling
 
-    carouselSlide.appendChild(content);
-
-    content.addEventListener("click", () => {
-      mainImage.src = img.src; // Update main image on click
-      mainImage.alt = img.alt;
-    });
+    ul.append(li);
   });
-});
+
+  ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  block.textContent = '';
+  block.append(ul);
+}
