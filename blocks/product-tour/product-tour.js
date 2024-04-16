@@ -1,7 +1,7 @@
 //import { getAssetUrl } from '../../utils/dam'; // Assuming a helper function to get DAM asset URLs
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
-const jsonData = JSON.parse(document.getElementById('product-tour-data').textContent); // Assuming data is stored in a hidden element
+const jsonData = JSON.parse(document.getElementById('product-tour').textContent); // Assuming data is stored in a hidden element
 
 const accordionContainer = document.querySelector(".accordion-container");
 const mainImage = document.querySelector("#main-image");
