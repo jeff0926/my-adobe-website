@@ -19,14 +19,11 @@
     display: block;
   }
   
-  /* Adjustments for Four Columns */
-  
   @media (min-width: 900px) {
     .columns > div {
       align-items: center;
-      flex-direction: row; /* Change to row layout */
-      gap: 32px; /* Adjust gap between columns */
-      width: calc(100% / 4); /* Adjust width for four columns (optional) */
+      flex-direction: row; /* Changed from column to row */
+      gap: 32px;
     }
   
     .columns > div > div {
@@ -35,4 +32,3 @@
     }
   }
   
-  /
