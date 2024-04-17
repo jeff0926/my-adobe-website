@@ -1,4 +1,3 @@
-/* Base styles for the multi-column layout */
 .multi-column {
   display: flex; /* Use flexbox for responsive layout */
   flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
@@ -12,7 +11,7 @@
   flex: 1 0 auto; /* Allow flexible column widths */
   padding: 10px; /* Add some padding for content */
   margin: 5px; /* Add some margin between columns */
-  border: 1px solid #ddd; /* Optional: add a border to columns */
+  border: 1px solid #ddd; /* Add border to each cell */
 }
 
 /* Specific styles for different column counts (adjust as needed) */
