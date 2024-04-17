@@ -1,0 +1,43 @@
+/* Base styles for the multi-column layout */
+.multi-column {
+  display: flex; /* Use flexbox for responsive layout */
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.multi-column li {
+  flex: 1 0 auto; /* Allow flexible column widths */
+  padding: 10px; /* Add some padding for content */
+  margin: 5px; /* Add some margin between columns */
+  border: 1px solid #ddd; /* Optional: add a border to columns */
+}
+
+/* Specific styles for different column counts (adjust as needed) */
+.multi-column-1-col {
+  width: 100%; /* 100% width for single column */
+}
+
+.multi-column-2-col {
+  width: 50%; /* 50% width for two columns */
+}
+
+.multi-column-3-col {
+  width: 33.33%; /* 33.33% width for three columns */
+}
+
+.multi-column-4-col {
+  width: 25%; /* 25% width for four columns */
+}
+
+/* Optional: Styling for images within columns */
+.multi-column img {
+  max-width: 100%; /* Allow images to scale within columns */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+/* Optional: Styling for image columns (if used in your JavaScript) */
+.columns-img-col {
+  text-align: center; /* Center image content vertically */
+}
