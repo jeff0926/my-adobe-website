@@ -5,9 +5,8 @@ export default function decorate(block) {
   if (!block || !block.children.length) {
     console.log('Error: Empty block received. Block:', block);
     return;
-  }else{
+  } else {
     console.log('Processing block with children:', block.children.length);
-  }
   }
 
   // Create the unordered list (ul) element
@@ -50,7 +49,7 @@ export default function decorate(block) {
 
   // Optimize images with createOptimizedPicture
   ul.querySelectorAll('img').forEach((img) => {
-    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]));
   });
 
   // Replace the block content with the optimized list
