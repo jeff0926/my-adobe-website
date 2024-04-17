@@ -19,29 +19,35 @@ export default function decorate(block) {
     if (Array.isArray(row.children)) {
       console.log('  - Row has', row.children.length, 'children.');
 
+      const content = document.createElement('div');
+      content.classList.add('accordion-content');
+      content.style.display = rowIndex === 0 ? 'block' : 'none'; // First row visible initially
+
       if (rowIndex === 0) {
         const header = document.createElement('h3');
         header.classList.add('accordion-header');
         header.textContent = row.children[0].textContent;
         accordion.append(header);
       } else {
-        const content = document.createElement('div');
-        content.classList.add('accordion-content');
-        content.style.display = 'none'; // Initially hidden
-
-        row.children.forEach((col, colIndex) => {
-          console.log('    - Processing column:', colIndex + 1, 'in row');
-          console.log('      - col:', col); // Log the entire column element
-          content.append(col); // Move columns into content section
-        });
-
-        accordion.append(content);
-
-        // Add event listener for toggling content visibility (example)
-        header.addEventListener('click', () => {
-          content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        });
+        const header = document.createElement('h3');
+        header.classList.add('accordion-header');
+        header.textContent = row.children[0].textContent;
+        content.append(header);
       }
+
+      // Assuming columns represent content within the accordion section
+      row.children.slice(1).forEach((col, colIndex) => {
+        console.log('    - Processing column:', colIndex + 1, 'in row');
+        console.log('      - col:', col); // Log the entire column element
+        content.append(col); // Move columns (content) into the content section
+      });
+
+      accordion.append(content);
+
+      // Add event listener for toggling content visibility (example)
+      header.addEventListener('click', () => {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      });
     } else {
       console.warn('Row ', rowIndex + 1, ' does not have a valid children array.');
     }
