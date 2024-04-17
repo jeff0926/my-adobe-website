@@ -5,6 +5,7 @@
   list-style: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
+  border: 1px solid #ddd;
 }
 
 .multi-column li {
@@ -17,27 +18,33 @@
 /* Specific styles for different column counts (adjust as needed) */
 .multi-column-1-col {
   width: 100%; /* 100% width for single column */
+  border: 1px solid #ddd;
 }
 
 .multi-column-2-col {
   width: 50%; /* 50% width for two columns */
+  border: 1px solid #ddd;
 }
 
 .multi-column-3-col {
   width: 33.33%; /* 33.33% width for three columns */
+  border: 1px solid #ddd;
 }
 
 .multi-column-4-col {
   width: 25%; /* 25% width for four columns */
+  border: 1px solid #ddd;
 }
 
 /* Optional: Styling for images within columns */
 .multi-column img {
   max-width: 100%; /* Allow images to scale within columns */
   height: auto; /* Maintain image aspect ratio */
+  border: 1px solid #ddd;
 }
 
 /* Optional: Styling for image columns (if used in your JavaScript) */
 .columns-img-col {
   text-align: center; /* Center image content vertically */
+  border: 1px solid #ddd;
 }
