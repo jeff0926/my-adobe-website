@@ -3,7 +3,11 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default function decorate(block) {
   // Handle potential errors and empty blocks
   if (!block || !block.children.length) {
+    console.log('Error: Empty block received. Block:', block);
     return;
+  }else{
+    console.log('Processing block with children:', block.children.length);
+  }
   }
 
   // Create the unordered list (ul) element
