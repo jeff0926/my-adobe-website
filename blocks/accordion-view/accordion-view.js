@@ -50,7 +50,7 @@ export default function decorate(block) {
   // Optimize images with createOptimizedPicture (optional)
   accordion.querySelectorAll('img').forEach((img) => {
     console.log('Optimizing image:', img.src, img.alt);
-    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]));
   });
 
   block.textContent = '';
