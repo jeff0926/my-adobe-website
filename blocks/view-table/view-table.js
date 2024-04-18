@@ -1,13 +1,15 @@
 export default function decorate(block) {
-    // Assuming 'block' is the table or contains the table
-    const table = block.querySelector("table"); // Adjust the selector as needed based on actual structure
+    // Debugging to see what's inside the block
+    console.log("Block contents:", block.innerHTML);
+
+    // Assuming the table is directly within the block
+    const table = block.querySelector("table");
 
     if (!table) {
         console.error('No table found in the block.');
         return;
     }
 
-    console.log("Table found, iterating rows:");
     table.querySelectorAll("tr").forEach((row, rowIndex) => {
         console.log(`Row ${rowIndex}:`);
         row.querySelectorAll("td, th").forEach((cell, cellIndex) => {
