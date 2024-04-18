@@ -1,18 +1,20 @@
-div > div:first-child {
+.accordion-view > div > div:first-child {
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
+    cursor: pointer; /* Make it obvious it's clickable */
     transition: background-color 0.3s;
 }
 
-div > div:first-child:hover {
-    background-color: #e9e9e9;  // Slight color change on hover
+.accordion-view > div > div:first-child:hover {
+    background-color: #e9e9e9; /* Highlight on hover for better user interaction */
 }
 
-div > div:nth-child(2) {
-    padding: 0 10px;  // Padding only when expanded
+.accordion-view > div > div:nth-child(2) {
+    padding: 0 10px;
     background-color: #fff;
     border-top: none;
-    display: none;  // Required for initial state before JS runs
-    margin: 0;  // Adjust margin as needed
+    max-height: 0; /* Start collapsed */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth transition for expanding and collapsing */
 }
