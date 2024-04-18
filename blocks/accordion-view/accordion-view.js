@@ -1,39 +1,32 @@
-export default function decorate(block) {
-    console.log("Initializing accordion within the block", block);
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionBlocks = document.querySelectorAll('.accordion-view');
 
-    // Find all accordion containers within the specified block
-    const accordionBlocks = block.querySelectorAll('.accordion-view');
-    console.log(`Found ${accordionBlocks.length} accordion-view blocks within the specified block.`);
+    accordionBlocks.forEach(block => {
+        console.log('Accordion Block HTML Content:', block.innerHTML); // Added console.log
 
-    if (accordionBlocks.length === 0) {
-        console.error('No accordion views found in the block.');
-        return; // Exit if no accordion blocks are found
-    }
+        block.querySelectorAll('div > div:first-child').forEach(category => {
+            category.setAttribute('aria-expanded', 'false');
+            category.addEventListener('click', function() {
+                const details = this.nextElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-    // Initialize each accordion block found
-    accordionBlocks.forEach((accordionBlock, index) => {
-        console.log(`Initializing accordion block ${index + 1}`);
+                // Collapse all other details
+                block.querySelectorAll('div > div:nth-child(2)').forEach(d => {
+                    if (d !== details) {
+                        d.style.maxHeight = null;
+                        d.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    }
+                });
 
-        accordionBlock.querySelectorAll('div > div:first-child').forEach((header, headerIndex) => {
-            // Initially setup header and details for animation and accessibility
-            const details = header.nextElementSibling;
-            details.style.maxHeight = '0px'; // Start with collapsed details
-            details.style.overflow = 'hidden'; // Prevent content overflow
-            details.style.transition = 'max-height 0.5s ease-out'; // Smooth transition for expand/collapse
-
-            // Add click event listener to each header
-            header.addEventListener('click', () => {
-                // Toggle the accordion section
-                if (details.style.maxHeight !== '0px') {
-                    details.style.maxHeight = '0px';
-                    header.setAttribute('aria-expanded', 'false');
-                    console.log(`Collapsing detail section ${headerIndex + 1}`);
+                // Toggle the current detail view
+                if (isExpanded) {
+                    details.style.maxHeight = null;
+                    this.setAttribute('aria-expanded', 'false');
                 } else {
-                    details.style.maxHeight = details.scrollHeight + 'px';
-                    header.setAttribute('aria-expanded', 'true');
-                    console.log(`Expanding detail section ${headerIndex + 1}`);
+                    details.style.maxHeight = details.scrollHeight + "px";
+                    this.setAttribute('aria-expanded', 'true');
                 }
             });
         });
     });
-}
+});
