@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const accordionBlocks = document.querySelectorAll('.accordion-view');
 
     accordionBlocks.forEach(block => {
+        console.log('Accordion Block HTML Content:', block.innerHTML); // Added console.log
+
         block.querySelectorAll('div > div:first-child').forEach(category => {
             category.setAttribute('aria-expanded', 'false');
             category.addEventListener('click', function() {
