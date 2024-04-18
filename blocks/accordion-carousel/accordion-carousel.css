@@ -1,0 +1,34 @@
+/* Basic reset for table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures that border spacing is removed */
+    table-layout: fixed; /* Optional: helps with column width consistency */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border for each cell */
+    text-align: left; /* Align text to the left; adjust as needed */
+    padding: 8px; /* Comfortable padding around text */
+    vertical-align: top; /* Align content to the top of the cell */
+}
+
+th {
+    background-color: #f4f4f4; /* Slightly grey background for header cells */
+    color: #333; /* Dark grey text color for headers for better readability */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafafa; /* Zebra striping for rows */
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0; /* Highlight row on hover for better user interaction */
+}
+
+/* Responsive table design */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto; /* Allows table to be scrollable horizontally on small screens */
+    }
+}
