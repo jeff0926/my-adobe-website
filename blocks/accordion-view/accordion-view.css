@@ -14,7 +14,7 @@
     padding: 0 10px;
     background-color: #fff;
     border-top: none;
-    max-height: 0; /* Start collapsed */
     overflow: hidden;
     transition: max-height 0.5s ease-out; /* Smooth transition for expanding and collapsing */
+    max-height: 0; /* Start collapsed */
 }
