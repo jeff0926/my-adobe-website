@@ -1,32 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const accordionBlocks = document.querySelectorAll('.accordion-view');
+export default function decorate(block) {
+    console.log("Block contents:", block.innerHTML);
 
-    accordionBlocks.forEach(block => {
-        console.log('Accordion Block HTML Content:', block.innerHTML); // Added console.log
-
-        block.querySelectorAll('div > div:first-child').forEach(category => {
-            category.setAttribute('aria-expanded', 'false');
-            category.addEventListener('click', function() {
-                const details = this.nextElementSibling;
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-                // Collapse all other details
-                block.querySelectorAll('div > div:nth-child(2)').forEach(d => {
-                    if (d !== details) {
-                        d.style.maxHeight = null;
-                        d.previousElementSibling.setAttribute('aria-expanded', 'false');
-                    }
-                });
-
-                // Toggle the current detail view
-                if (isExpanded) {
-                    details.style.maxHeight = null;
-                    this.setAttribute('aria-expanded', 'false');
-                } else {
-                    details.style.maxHeight = details.scrollHeight + "px";
-                    this.setAttribute('aria-expanded', 'true');
-                }
-            });
+    block.querySelectorAll("div > div:first-child").forEach(category => {
+        category.style.cursor = 'pointer';
+        category.addEventListener('click', () => {
+            const details = category.nextElementSibling;
+            if (details.style.maxHeight) {
+                details.style.maxHeight = null;  // Collapse details
+            } else {
+                details.style.maxHeight = details.scrollHeight + "px";  // Expand details
+            }
         });
     });
-});
+
+    // Initially prepare all detail divs for animation
+    block.querySelectorAll("div > div:nth-child(2)").forEach(detail => {
+        detail.style.maxHeight = "0px";  // Start collapsed
+        detail.style.overflow = "hidden";
+        detail.style.transition = "max-height 0.3s ease-out";  // Smooth transition for expanding and collapsing
+    });
+}
