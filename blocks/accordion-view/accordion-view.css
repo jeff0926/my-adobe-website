@@ -1,43 +1,12 @@
-.accordion {
-  /* Styles for the main accordion container */
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
+div > div:first-child {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
 }
 
-.accordion-header {
-  /* Styles for the accordion header */
-  cursor: pointer;
-  padding: 10px 15px;
-  background-color: #eee;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-content {
-  /* Styles for the accordion content section */
-  padding: 10px 15px;
-  /* Initially hidden */
-  display: none;
-}
-
-.accordion-header.active + .accordion-content {
-  /* Styles for the content section when the accordion is expanded */
-  display: block;
-}
-
-/* Optional styling for visual indicator when expanded */
-.accordion-header.active {
-  background-color: #ccc;
-}
-
-.accordion-header:after {
-  content: "\02795"; /* Down arrow for closed state */
-  font-family: FontAwesome, sans-serif; /* Replace with your font if needed */
-  float: right;
-  font-size: 12px;
-  color: #888;
-}
-
-.accordion-header.active:after {
-  content: "\25B4"; /* Up arrow for opened state */
+div > div:nth-child(2) {
+    padding: 10px;
+    background-color: #fff;
+    border-top: none;
+    display: none;  /* Initially hide details */
 }
