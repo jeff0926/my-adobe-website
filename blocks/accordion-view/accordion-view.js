@@ -1,40 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const accordionBlocks = document.querySelectorAll('.accordion-view');
-    console.log("Initializing accordion views");
+import { createOptimizedPicture } from '../../scripts/aem.js';
 
-    accordionBlocks.forEach((block, blockIndex) => {
-        console.log(`Processing block ${blockIndex + 1}`);
-        block.querySelectorAll('div > div:first-child').forEach((category, categoryIndex) => {
-            console.log(`Initializing category ${categoryIndex + 1}: ${category.textContent.trim()}`);
-            category.setAttribute('aria-expanded', 'false');
-            category.addEventListener('click', function() {
-                const details = this.nextElementSibling;
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                
-                console.log(`Category ${categoryIndex + 1} clicked: ${isExpanded ? 'collapse' : 'expand'}`);
+export default function decorate(block) {
+  console.log('--- Processing block data ---');
+  console.log('block:', block); // Log the entire block object
 
-                // Collapse all other details
-                block.querySelectorAll('div > div:nth-child(2)').forEach((d, detailIndex) => {
-                    if (d !== details) {
-                        if (d.style.maxHeight) {
-                            console.log(`Collapsing other detail ${detailIndex + 1}`);
-                            d.style.maxHeight = null;
-                            d.previousElementSibling.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                });
+  if (!block || !block.children.length || block.children.length < 2) {
+    console.error('Error: Block requires at least two rows.');
+    return;
+  }
 
-                // Toggle the current detail view
-                if (isExpanded) {
-                    details.style.maxHeight = null;
-                    this.setAttribute('aria-expanded', 'false');
-                    console.log(`Collapsing detail ${categoryIndex + 1}`);
-                } else {
-                    details.style.maxHeight = details.scrollHeight + "px";
-                    this.setAttribute('aria-expanded', 'true');
-                    console.log(`Expanding detail ${categoryIndex + 1}`);
-                }
-            });
+  const accordion = document.createElement('div');
+  accordion.classList.add('accordion');
+
+  [...block.children].forEach((row, rowIndex) => {
+    console.log('--- Processing row:', rowIndex + 1, '---');
+    console.log('row:', row); // Log the entire row object
+
+    if (Array.isArray(row.children)) {
+      console.log('  - Row has', row.children.length, 'children.');
+
+      if (rowIndex === 0) {
+        const header = document.createElement('h3');
+        header.classList.add('accordion-header');
+        header.textContent = row.children[0].textContent;
+        accordion.append(header);
+      } else {
+        const content = document.createElement('div');
+        content.classList.add('accordion-content');
+        content.style.display = 'none'; // Initially hidden
+
+        row.children.forEach((col, colIndex) => {
+          console.log('    - Processing column:', colIndex + 1, 'in row');
+          console.log('      - col:', col); // Log the entire column element
+          content.append(col); // Move columns into content section
         });
-    });
-});
+
+        accordion.append(content);
+
+        // Add event listener for toggling content visibility (example)
+        header.addEventListener('click', () => {
+          content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        });
+      }
+    } else {
+      console.warn('Row ', rowIndex + 1, ' does not have a valid children array.');
+    }
+  });
+
+  // Optimize images with createOptimizedPicture (optional)
+  accordion.querySelectorAll('img').forEach((img) => {
+    console.log('Optimizing image:', img.src, img.alt);
+    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]));
+  });
+
+  block.textContent = '';
+  block.append(accordion);
+}
