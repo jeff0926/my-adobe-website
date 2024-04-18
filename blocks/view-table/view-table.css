@@ -1,0 +1,85 @@
+/* Reset some basic HTML elements to enhance cross-browser consistency */
+html, body, p, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, figcaption, div, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* Set base font and background properties */
+body {
+    font-family: 'Arial', sans-serif; /* You can replace this with your preferred font */
+    line-height: 1.5;
+    font-size: 16px; /* Base font size */
+    color: #333; /* Base text color */
+    background-color: #fff; /* Background color */
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: .5em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: .875em; }
+
+/* Link styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* List styles */
+ul, ol {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility classes */
+.full-width {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1em; }
+.mb-1 { margin-bottom: 1em; }
+.ml-1 { margin-left: 1em; }
+.mr-1 { margin-right: 1em; }
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.25em; }
+    h3 { font-size: 1.125em; }
+}
