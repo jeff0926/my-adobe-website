@@ -1,58 +1,30 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionBlocks = document.querySelectorAll('.accordion-view');
 
-export default function decorate(block) {
-  console.log('--- Processing block data ---');
-  console.log('block:', block); // Log the entire block object
+    accordionBlocks.forEach(block => {
+        block.querySelectorAll('div > div:first-child').forEach(category => {
+            category.setAttribute('aria-expanded', 'false');
+            category.addEventListener('click', function() {
+                const details = this.nextElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-  if (!block || !block.children.length || block.children.length < 2) {
-    console.error('Error: Block requires at least two rows.');
-    return;
-  }
+                // Collapse all other details
+                block.querySelectorAll('div > div:nth-child(2)').forEach(d => {
+                    if (d !== details) {
+                        d.style.maxHeight = null;
+                        d.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    }
+                });
 
-  const accordion = document.createElement('div');
-  accordion.classList.add('accordion');
-
-  [...block.children].forEach((row, rowIndex) => {
-    console.log('--- Processing row:', rowIndex + 1, '---');
-    console.log('row:', row); // Log the entire row object
-
-    if (Array.isArray(row.children)) {
-      console.log('  - Row has', row.children.length, 'children.');
-
-      if (rowIndex === 0) {
-        const header = document.createElement('h3');
-        header.classList.add('accordion-header');
-        header.textContent = row.children[0].textContent;
-        accordion.append(header);
-      } else {
-        const content = document.createElement('div');
-        content.classList.add('accordion-content');
-        content.style.display = 'none'; // Initially hidden
-
-        row.children.forEach((col, colIndex) => {
-          console.log('    - Processing column:', colIndex + 1, 'in row');
-          console.log('      - col:', col); // Log the entire column element
-          content.append(col); // Move columns into content section
+                // Toggle the current detail view
+                if (isExpanded) {
+                    details.style.maxHeight = null;
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    details.style.maxHeight = details.scrollHeight + "px";
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
-
-        accordion.append(content);
-
-        // Add event listener for toggling content visibility (example)
-        header.addEventListener('click', () => {
-          content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        });
-      }
-    } else {
-      console.warn('Row ', rowIndex + 1, ' does not have a valid children array.');
-    }
-  });
-
-  // Optimize images with createOptimizedPicture (optional)
-  accordion.querySelectorAll('img').forEach((img) => {
-    console.log('Optimizing image:', img.src, img.alt);
-    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]));
-  });
-
-  block.textContent = '';
-  block.append(accordion);
-}
+    });
+});
