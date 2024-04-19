@@ -1,0 +1,18 @@
+/* Accordion Carousel Styles for accordion-carousel-new */
+.accordion-carousel-new .accordion-section {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.accordion-carousel-new .accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+.accordion-carousel-new .accordion-section.active .accordion-content {
+  display: block;
+}
+
+.accordion-carousel-new .accordion-section.active > div[data-align="center"] {
+  font-weight: bold;
+}
