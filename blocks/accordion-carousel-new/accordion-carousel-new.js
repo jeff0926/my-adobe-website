@@ -1,55 +1,32 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
     console.log("Block contents:", block.innerHTML);
 
-    block.querySelectorAll(".accordion-carousel-new > div").forEach(section => {
-        const title = section.querySelector("div[data-align='center']");
-        const content = section.querySelector(".accordion-content");
-        const carousel = content.querySelector(".carousel");
-        const prevBtn = content.querySelector(".prev-btn");
-        const nextBtn = content.querySelector(".next-btn");
+    // Log the number of accordion sections found
+    const sections = block.querySelectorAll('.accordion-carousel-new > div[data-align="center"] > strong');
+    console.log("Number of accordion sections:", sections.length);
 
-        title.style.cursor = 'pointer';
-        title.addEventListener('click', () => {
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null; // Collapse content
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px"; // Expand content
-            }
-        });
-
-        // Initialize carousel
-        let currentSlide = 0;
-
-        // Show initial slide
-        showSlide(currentSlide);
-
-        // Event listeners for prev and next buttons
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + carousel.children.length) % carousel.children.length;
-            showSlide(currentSlide);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % carousel.children.length;
-            showSlide(currentSlide);
-        });
-
-        function showSlide(slideIndex) {
-            // Hide all slides
-            for (let i = 0; i < carousel.children.length; i++) {
-                carousel.children[i].style.display = "none";
-            }
-            // Show current slide
-            carousel.children[slideIndex].style.display = "block";
-        }
+    // Log each accordion section title
+    sections.forEach((section, index) => {
+        console.log(`Accordion section ${index + 1} title:`, section.textContent);
     });
 
-    // Initially prepare all content divs for animation
-    block.querySelectorAll(".accordion-carousel-new .accordion-content").forEach(content => {
-        content.style.maxHeight = "0px"; // Start collapsed
-        content.style.overflow = "hidden";
-        content.style.transition = "max-height 0.3s ease-out"; // Smooth transition for expanding and collapsing
+    // Attach click event listeners to accordion section titles
+    block.querySelectorAll('.accordion-carousel-new > div[data-align="center"]').forEach(category => {
+        category.style.cursor = 'pointer';
+        category.addEventListener('click', () => {
+            const details = category.nextElementSibling;
+            if (details.style.maxHeight) {
+                details.style.maxHeight = null;  // Collapse details
+            } else {
+                details.style.maxHeight = details.scrollHeight + "px";  // Expand details
+            }
+        });
+    });
+
+    // Initially prepare all detail divs for animation
+    block.querySelectorAll('.accordion-carousel-new > div > div').forEach(detail => {
+        detail.style.maxHeight = "0px";  // Start collapsed
+        detail.style.overflow = "hidden";
+        detail.style.transition = "max-height 0.3s ease-out";  // Smooth transition for expanding and collapsing
     });
 }
