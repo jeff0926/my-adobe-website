@@ -3,7 +3,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default function decorate(block) {
     console.log("Block contents:", block.innerHTML);
 
-    block.querySelectorAll(".accordion-carousel-new .accordion-section").forEach(section => {
+    block.querySelectorAll(".accordion-carousel-new > div").forEach(section => {
         const title = section.querySelector("div[data-align='center']");
         const content = section.querySelector(".accordion-content");
         const carousel = content.querySelector(".carousel");
