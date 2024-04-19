@@ -2,7 +2,8 @@ export default function decorate(block) {
     console.log("Block contents:", block.innerHTML);
 
     // Log the number of accordion sections found
-    const sections = block.querySelectorAll('.accordion-carousel-new > div[data-align="center"] > strong');
+    const sections = block.querySelectorAll('.accordion-carousel-new strong');
+
     console.log("Number of accordion sections:", sections.length);
 
     // Log each accordion section title
