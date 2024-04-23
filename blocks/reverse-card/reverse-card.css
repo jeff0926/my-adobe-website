@@ -1,0 +1,18 @@
+.reverse-card {
+  /* Styles for the main carousel container */
+  overflow: hidden; /* Hide overflowing content */
+  width: fit-content; /* Adjust width as needed */
+  display: flex; /* Allow horizontal arrangement of slides */
+}
+
+.reverse-card div:first-child { /* Style the first child element (usually the first slide) */
+  /* Additional styles for the first slide (e.g., no left margin) */
+}
+
+.reverse-card div {
+  /* Styles for all child elements (individual slides) */
+  flex: 0 0 100%; /* Set width for each slide */
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional styles for navigation (arrows, indicators) if needed */
