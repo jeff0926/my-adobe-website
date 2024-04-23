@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  console.log("decorate(block)");
   if (block.type === 'reverse-card') {
     console.log("Block data:", block); // Log the entire block object
 
