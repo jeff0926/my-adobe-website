@@ -1,13 +1,32 @@
 export default function decorate(block) {
   if (block.type === 'reverse-card') {
-    block.children.forEach((row, rowIndex) => {
-      row.children.forEach((col, colIndex) => {
-        col.style.flex = '0 0 100%'; // Set width for each slide
-        col.style.transition = 'transform 0.5s ease-in-out'; // Smooth transition
-        
-        // Apply class names for initial positioning (optional)
-        col.classList.add(rowIndex === 0 ? 'active' : 'inactive'); // Example
-      });
+    console.log("Block data:", block); // Log the entire block object
+
+    const slides = block.querySelectorAll('.reverse-card div'); // Select all slide containers
+    console.log("Number of slides:", slides.length); // Log the number of slides
+
+    slides.forEach((slideContainer) => {
+      const imageElement = slideContainer.querySelector('div:first-child'); // Get image element
+      const captionElement = slideContainer.querySelector('div:last-child'); // Get caption element
+
+      console.log("Slide container:", slideContainer); // Log the slide container element
+
+      if (imageElement) {
+        const imageSrc = imageElement.textContent || imageElement.innerText;
+        console.log("Image source:", imageSrc);
+      } else {
+        console.log("Slide missing image element!");
+      }
+
+      if (captionElement) {
+        const captionText = captionElement.textContent || captionElement.innerText;
+        console.log("Caption text:", captionText);
+      } else {
+        console.log("Slide missing caption element!");
+      }
+
+      // Process image source and caption (e.g., display in carousel)
+      // ...
     });
   }
 }
