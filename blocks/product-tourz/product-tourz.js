@@ -5,6 +5,7 @@ export default function decorate(block) {
     let currentMainSection = '';
 
     sections.forEach((section, index) => {
+        alert('foreach');
         console.log(' sections.forEach((section, index)');
         const sectionType = section.querySelector('div:first-child');
         if (sectionType !== null) {
