@@ -1,10 +1,17 @@
-// product-tourz.js
 document.addEventListener("DOMContentLoaded", function() {
-    const productTourz = document.querySelector('.product-tourz');
-    if (productTourz) {
-        const divs = productTourz.querySelectorAll('div');
-        alert('Number of divs: ' + divs.length);
-    } else {
-        alert('No product-tourz element found.');
-    }
+    var accButtons = document.querySelectorAll('.product-tourz > div > div:first-child');
+
+    accButtons.forEach(function(btn) {
+        btn.classList.add('accordion-button');
+        btn.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
 });
+
