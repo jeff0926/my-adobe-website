@@ -1,7 +1,7 @@
 export default function decorate(block) {
     console.log('Decorating block...');
 
-    const sections = block.querySelectorAll('.oli-tour > div');
+    const sections = block.querySelectorAll('.product-tourz > div');
     console.log('Found', sections.length, 'sections in the block.');
 
     let currentMainSection = '';
