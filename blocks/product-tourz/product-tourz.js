@@ -5,10 +5,11 @@ export default function decorate(block) {
     let currentMainSection = '';
 
     sections.forEach((section, index) => {
+        console.log(' sections.forEach((section, index)');
         const sectionType = section.querySelector('div:first-child');
         if (sectionType !== null) {
             currentMainSection = section.querySelector('div:nth-child(2)').textContent.trim();
-            console.log(`${currentMainSection}`);
+            console.log(`currentMainSection + ${currentMainSection}`);
         } else {
             const description = section.querySelector('div:nth-child(2)').textContent.trim();
             console.log(`  Child of ${currentMainSection}: Step ${index + 1}:`);
