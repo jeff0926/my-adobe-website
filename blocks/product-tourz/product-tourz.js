@@ -1,13 +1,17 @@
 export default function decorate(block) {
+    console.log('Decorating block...');
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('enter');
+                console.log('Element entered:', entry.target);
             }
         });
     });
 
     const sections = block.querySelectorAll(':scope > div');
+    console.log('Found sections:', sections.length);
 
     let currentMainSection = '';
 
@@ -28,6 +32,9 @@ export default function decorate(block) {
             console.log(`    Image Alt Text: ${imageAlt}`);
 
             observer.observe(section);
+            console.log('Observed section:', section);
         }
     });
+
+    console.log('Block decoration complete.');
 }
