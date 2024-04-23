@@ -1,0 +1,16 @@
+/* product-tourz.css */
+.product-tourz {
+    background-color: #f0f0f8; /* Light blue background for the main container */
+    padding: 20px; /* Padding around the content inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    margin: 20px; /* Margin around the container */
+    border: 2px solid #d0d0d0; /* Light grey border */
+}
+
+.product-tourz div {
+    background-color: #ffffff; /* White background for child divs */
+    margin-top: 10px; /* Margin top for each child div */
+    padding: 10px; /* Padding inside each child div */
+    border: 1px solid #ccc; /* Border for each child div */
+    border-radius: 4px; /* Rounded corners for child divs */
+}
