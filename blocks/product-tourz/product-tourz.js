@@ -1,5 +1,5 @@
 export default function decorate(block) {
-    console.log('Decorating block...');
+    console.log('Decorating block...!!!');
 
     const sections = block.querySelectorAll('.oli-tour > div');
     let currentMainSection = '';
