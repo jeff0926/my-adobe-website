@@ -1,0 +1,157 @@
+{
+    "overview": {
+      "name": "Overview",
+      "text": "This product tour explores how the Joule copilot will elevate the employee experience by simplifying tasks and making it easier to find information and get answers to questions.",
+      "ctaText": "Start the tour",
+      "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/overview-image.jpg",
+      "imgAltText": "Screenshot of intelligent visibility dashboard down to the sales order level",
+      "bottomText": "Take the next step and learn how the product can meet your business needs.",
+      "bottomCTA1Text": "Request a live demo",
+      "bottomCTA1Link": "https://www.sap.com/registration/request-demo.html",
+      "bottomCTA2Text": "Visit the product page",
+      "bottomCTA2Link": "https://www.sap.com/products/scm/integrated-business-planning.html",
+      "finalSlideTitle": "Ready to take the next step?",
+      "finalSlideText": "",
+      "finalSlideCTA1Text": "Request a live demo",
+      "finalSlideCTA1Link": "https://www.sap.com/registration/request-demo.html",
+      "finalSlideCTA2Text": "Visit the product page",
+      "finalSlideCTA2Link": "https://www.sap.com/products/scm/integrated-business-planning.html",
+      "startAgainText": "Start tour again",
+      "_stepXofY_step": "Step",
+      "_stepXofY_of": "of"
+    },
+    "tours": [
+      {
+        "name": "Giving feedback",
+      "steps": [
+        {
+          "text": "Providing feedback doesn't come naturally to all employees. Joule helps employees by guiding them through the process of requesting and providing feedback.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario1/sc1-step1.jpg",
+            "imgAltText": "Employee profile"
+          }
+        },
+        {
+          "text": "Joule uses prompts to guide employees on providing meaningful, structured feedback.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario1/sc1-step2.jpg",
+            "imgAltText": "Employee profile interacting with Joule"
+          }
+        },         
+          {
+          "text": "Done! Within minutes, employees can become experts on giving meaningful, structured feedback.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario1/sc1-step5.jpg",
+            "imgAltText": "Employee completing a Joule interaction"
+          }
+        }
+      ]
+    },
+          { 
+      "name": "Requesting information",
+      "steps": [
+        {
+          "text": "Sometimes, you need to quickly find information, such as your cost center, but you aren't sure where to start.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario2/sc2-step1.jpg",
+            "imgAltText": "Employee asking for information"
+          }
+        },
+        {
+          "text": "Joule swiftly answers questions related to employees' profiles. Managers and HR representatives with certain permissions can also view other appropriate employee information.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario2/sc2-step2.jpg",
+            "imgAltText": "Joule answering an employee's question"
+          }
+        },
+        {
+          "text": "Finding your latest salary information is simple with Joule. ",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario2/sc2-step3.jpg",
+            "imgAltText": "Joule providing salary information to an employee."
+          }
+        },
+        {
+          "text": "Navigating through the organization chart doesn't need to feel like a maze. With Joule, you can quickly explore the part of the organization you're interested in.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario2/sc2-step4.jpg",
+            "imgAltText": "Employee asking for a list of direct reports"
+          }
+        },
+        {
+          "text": "Jumping to employee profiles right from the conversation with Joule makes navigation simpler and helps employees work faster.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario2/sc2-step5.jpg",
+            "imgAltText": "Joule giving an employee information on direct reports."
+          }
+        }
+      ]
+    },
+    { 
+      "name": "Changing personal information",
+      "steps": [
+        {
+          "text": "Changing an employee location, working time, name, pronoun, and other information is done in a guided way, without ever leaving a single screen. ",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario3/sc3-step1.jpg",
+            "imgAltText": "Employee asking Joule to update a pronoun"
+          }
+        },
+        {
+          "text": "Once changes are made, they're reflected immediately on the employee profile.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario3/sc3-step2.jpg",
+            "imgAltText": "Joule confirming pronoun changes"
+          }
+        }
+      ]
+    },
+    { 
+      "name": "Promoting employees",
+      "steps": [
+        {
+          "text": "Some managers delay the initiation of promotions or making needed changes in organizational information because of the effort involved. With help from Joule, managers can request employee promotions through a guided process.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario4/sc4-step1.jpg",
+            "imgAltText": "Manager requesting Joule to initiate a promotion"
+          }
+        },
+        {
+          "text": "By setting an effective date for a promotion, managers don't need to create reminders for updating the system. The promotion will take place on the selected date in the future &mdash; or even the past.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario4/sc4-step2.jpg",
+            "imgAltText": "Joule asking a manager to select the date for a promotion to take effect"
+          }
+        },
+        {
+          "text": "Even when Joule doesn't suggest the job role a manager is looking for, the manager can start typing the intended role and a new suggestion will appear.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario4/sc4-step3.jpg",
+            "imgAltText": "Joule asking a manager to select the title for the promoted employee"
+          }
+        },
+        {
+          "text": "By interacting with Joule, approval workflows are part of the process, helping accelerate and simplify employee promotions.",
+          "content": {
+            "type": "image",
+            "imgPath": "http://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/joule/img/scenario4/sc4-step4.jpg",
+            "imgAltText": "Joule and a manager confirming a promotion is approved"
+          }          }
+        ]
+      }
+    ]
+  }
+
