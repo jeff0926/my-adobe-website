@@ -8,20 +8,17 @@ class ProductTourComponent extends HTMLElement {
         this.loadData();
     }
 
-    async loadData() {
-        if (this.hasAttribute('data-url')) {
-            const url = this.getAttribute('data-url');
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                this.renderProductTour(data);
-            } catch (error) {
-                console.error('Error fetching product tour data:', error);
-            }
-        } else {
-            console.error('Data URL not provided');
-        }
+   async loadData() {
+    const hardcodedUrl = "https://raw.githubusercontent.com/jeff0926/cdn-deliver/main/integrated-business-planning.json";
+    try {
+        const response = await fetch(hardcodedUrl); // Use the hardcoded URL
+        const data = await response.json();
+        this.renderProductTour(data);
+    } catch (error) {
+        console.error('Error fetching product tour data:', error);
     }
+}
+
 
     renderProductTour(data) {
         this.shadowRoot.innerHTML = `
