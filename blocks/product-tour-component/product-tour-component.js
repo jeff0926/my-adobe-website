@@ -4,7 +4,7 @@ productTourComponent.setAttribute('data-url', 'https://raw.githubusercontent.com
 
 // Create the script element to load product-tour-component.js
 const scriptElement = document.createElement('script');
-scriptElement.src = './product-tour-component-build.js';
+scriptElement.src = 'https://main--my-adobe-website--jeff0926.hlx.page/blocks/product-tour-component/product-tour-component-build.js';
 scriptElement.defer = true;
 
 // Append elements to the document body
