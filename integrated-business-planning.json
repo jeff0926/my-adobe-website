@@ -1,0 +1,227 @@
+{
+    "overview": {
+      "name": "Overview",
+      "text": "Get an inside look at SAP Integrated Business Planning &mdash; the cornerstone of a risk-resilient supply chain. Click through our product tour, explore key features, and learn how they help you optimize planning across different scenarios.",
+      "ctaText": "Start the tour",
+      "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/overview.jpg",
+      "imgAltText": "Screenshot of intelligent visibility dashboard down to the sales order level",
+      "bottomText": "Take the next step and learn how the product can meet your business needs.",
+      "bottomCTA1Text": "Request a live demo",
+      "bottomCTA1Link": "https://www.sap.com/registration/request-demo.html",
+      "bottomCTA2Text": "Visit the product page",
+      "bottomCTA2Link": "https://www.sap.com/products/scm/integrated-business-planning.html",
+      "finalSlideTitle": "Ready to take the next step?",
+      "finalSlideText": "",
+      "finalSlideCTA1Text": "Request a live demo",
+      "finalSlideCTA1Link": "https://www.sap.com/registration/request-demo.html",
+      "finalSlideCTA2Text": "Visit the product page",
+      "finalSlideCTA2Link": "https://www.sap.com/products/scm/integrated-business-planning.html",
+      "startAgainText": "Start tour again",
+      "_stepXofY_step": "Step",
+      "_stepXofY_of": "of"
+    },
+    "tours": [
+      {
+        "name": "Supply chain visibility and risk management",
+        "steps": [
+          {
+            "text": "Get an overview of critical risks in your supply chain network and work on them instantly.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario1/sc1-step1.jpg",
+              "imgAltText": "Screenshot of dashboard landing page for supply chain risk analysis"
+            }
+          },
+          {
+            "text": "Use analytics stories in SAP IBP to smartly analyze performance data, KPIs, and risks.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario1/sc1-step2.jpg",
+              "imgAltText": "Screenshot of dashboard for supply chain risk analysis"
+            }
+          },
+          {
+            "text": "Apply geo mapping technology to keep relevant supply chain network data, key KPIs, and priority alerts at your fingertips.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario1/sc1-step3.jpg",
+              "imgAltText": "Screenshot of geo mapping capabilities"
+            }
+          },
+          {
+            "text": "Enable exception-based supply chain planning using procedure playbooks for prioritized alerting and guided resolutions.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario1/sc1-step4.jpg",
+              "imgAltText": "Screenshot of supply chain risk management information"
+            }
+          },
+          {
+            "text": "Analyze and manage your carbon footprint throughout your supply chain network.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario1/sc1-step5.jpg",
+              "imgAltText": "Screenshot of dashboard for managing carbon footprint"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sales and operations planning (S&OP) to sales and operations execution (S&OE)",
+        "steps": [
+          {
+            "text": "Define and manage the recurring S&OP planning cycle.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario2/sc2-step1.jpg",
+              "imgAltText": "Screenshot of the S&OP monthly process"
+            }
+          },
+          {
+            "text": "Coordinate demand planning activities to establish consensus demand.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario2/sc2-step2.jpg",
+              "imgAltText": "Screenshot of S&OP process for establishing consensus demand"
+            }
+          },
+          {
+            "text": "Generate a rough-cut supply plan by identifying constraints.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario2/sc2-step3.jpg",
+              "imgAltText": "Screenshot of capacity constraints"
+            }
+          },
+          {
+            "text": "Prepare and conduct management review meetings.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario2/sc2-step4.jpg",
+              "imgAltText": "Screenshot of dashboard for management review"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Forecasting and demand management",
+        "steps": [
+          {
+            "text": "Classify and analyze demand patterns in your historical data to help guide forecasting and algorithm selection.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario3/sc3-step1.jpg",
+              "imgAltText": "Screenshot of dashboard with time-series analysis output"
+            }
+          },
+          {
+            "text": "Generate a forecast and analyze drivers to understand what drives forecast deviation.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario3/sc3-step2.jpg",
+              "imgAltText": "Screenshot of variable impact analysis and forecast dashboard"
+            }
+          },
+          {
+            "text": "Manually adjust forecasts based on information and insights not included in the mathematical model.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario3/sc3-step3.jpg",
+              "imgAltText": "Screenshot of planner workspace with grid for manual forecast adjustments"
+            }
+          },
+          {
+            "text": "Analyze forecast errors and bias using stories to both monitor the demand planning process and focus on areas in need of improvement.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario3/sc3-step4.jpg",
+              "imgAltText": "Screenshot of dashboard for analyzing forecast errors and bias"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Inventory management and optimization",
+        "steps": [
+          {
+            "text": "Review inputs to evaluate model setup.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario4/sc4-step1.jpg",
+              "imgAltText": "Screenshot of inventory planning inputs"
+            }
+          },
+          {
+            "text": "Perform optimizations and run and review outputs.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario4/sc4-step2.jpg",
+              "imgAltText": "Screenshot of dashboard for inventory optimization"
+            }
+          },
+          {
+            "text": "Evaluate the drivers of inventory levels and identify the factors influencing the stock target.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario4/sc4-step3.jpg",
+              "imgAltText": "Screenshot of dashboard for inventory planning"
+            }
+          },
+          {
+            "text": "Apply scenario planning to examine the effect of different inputs.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario4/sc4-step4.jpg",
+              "imgAltText": "Screenshot of dashboard for scenario planning"
+            }
+          },
+          {
+            "text": "Analyze the financial impact of inventory plans.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario4/sc4-step5.jpg",
+              "imgAltText": "Screenshot of dashboard for analyzing financial impact of plans"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Supply planning and response management",
+        "steps": [
+          {
+            "text": "Perform supply planning runs, then review the rough-cut capacity plan in bucketed periods. Quickly identify periods of capacity overages and determine corrective options.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario5/sc5-step1.jpg",
+              "imgAltText": "Screenshot of data for analyzing capacity overages"
+            }
+          },
+          {
+            "text": "Send supply plans for components to suppliers and incorporate their updates to further constrain the plan. Any resulting shortages will trigger an alert, and planners can investigate alternative options.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario5/sc5-step2.jpg",
+              "imgAltText": "Screenshot of analysis of supplier commit shortages"
+            }
+          },
+          {
+            "text": "Prioritize demands so that key customers are satisfied first, or use fair-share techniques with our supply planning engine to spread out supply more evenly.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario5/sc5-step3.jpg",
+              "imgAltText": "Screenshot of prioritized demands"
+            }
+          },
+          {
+            "text": "Use one of many available Fiori apps to review supply elements such as planned orders, purchase requisitions, and purchase orders.",
+            "content": {
+              "type": "image",
+              "imgPath": "https://www.sap.com/content/dam/site/sapcom/infographics/guided-tour/integrated-business-planning/img/scenario5/sc5-step4.jpg",
+              "imgAltText": "Screenshot of Fiori app for reviewing supply elements"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
