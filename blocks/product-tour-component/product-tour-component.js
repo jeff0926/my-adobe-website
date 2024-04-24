@@ -6,6 +6,7 @@ class ProductTourComponent extends HTMLElement {
 
     connectedCallback() {
         this.loadData();
+        console.log('this.loadData()');
     }
 
     async loadData() {
