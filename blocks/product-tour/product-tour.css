@@ -1,1 +1,6 @@
-H3 { color: green }
+.product-tour-container {
+    max-width: 80%; /* Limit the width of the container */
+    /*max-height: 40%;*/
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the component */
+}
