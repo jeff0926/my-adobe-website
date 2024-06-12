@@ -28,7 +28,7 @@
         // Append both the product-tour and script elements to the determined parent
         appendTarget.appendChild(productTour);
         appendTarget.appendChild(script);
- script.src = 'https://cdn.udex.services.sap.com/dxf/latest/product-tour/product-tour.js';
+	script.src = 'https://cdn.udex.services.sap.com/dxf/latest/product-tour/product-tour.js';
 //new
 	script_event.src = 'https://cdn.udex.services.sap.com/dxf/v0.0.5/product-tour/product-tour-event.js';
 
